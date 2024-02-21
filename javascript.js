@@ -101,13 +101,20 @@ function playGame(){
 
     //if statement to determine victory condition
     
-    if(playerPoints === 3){
+    if(playerPoints === 3){ //if the player wins
         console.log("You win!");
     }
-    else{
+    else{ //if the player loses
         console.log("You lose!");
     }
 }
 
-    //initial user prompt to play and to play again
+    //game introduction with rules
+
+console.log('%cWelcome to "Rock, Paper, Scissors"!', 'font-weight: bold; background-color: black; color: white;')
+console.log("\n\nThis is a game of chance involving two players picking one of three possible choices(Rock, Paper, Scissors) per round.\nThe victory conditions are as follows: Rock beats scissors, scissors beats paper, and paper beats rock.\n\n");
+
+    //player prompt to play
+
+playerChoice = prompt("Would you like to play?");
 
