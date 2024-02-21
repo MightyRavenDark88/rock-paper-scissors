@@ -32,7 +32,7 @@ function playGame(){
             
                 //Formats playerChoice so choice is interpreted correctly
 
-            playerChoice = playerChoice.at(0).toUpperCase() + playerChoice.slice(1, playerChoice.length - 1).toLowerCase();
+            playerChoice = playerChoice.at(0).toUpperCase() + playerChoice.slice(1).toLowerCase();
             
                 //Define if statement to determine playerChoice validity then play round
 
