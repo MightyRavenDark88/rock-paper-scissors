@@ -38,8 +38,6 @@ function playGame(){
 
             if(playerChoice === options[0] || playerChoice === options[1] || playerChoice === options[2] ){ //if player enters a string type answer
                 
-                
-                
                     //Get computerChoice
 
                 getComputerChoice();
@@ -48,44 +46,44 @@ function playGame(){
                 
                 if (playerChoice === options[0] || computerChoice === options[0]){ //if either player or computer picks rock
                     if(playerChoice === options[0] && computerChoice === options[0]){
-                        console.log("Rock ties with rock! It's a draw!");
+                        console.log("You chose rock.\nComputer chose rock.\n\nRock ties with rock! It's a draw!");
                         return;
                     }
                     else if(playerChoice === options[0] && computerChoice === options[1]){
-                        console.log("Paper beats rock! Computer wins a point!");
+                        console.log("You chose rock.\nComputer chose paper.\n\nPaper beats rock! Computer wins a point!");
                         return computerPoints++;
                     }
                     else if(playerChoice === options[1] && computerChoice === options[0]){
-                        console.log("Paper beats rock! You win a point!");
+                        console.log("You chose paper.\nComputer chose rock.\n\nPaper beats rock! You win a point!");
                         return playerPoints++;
                     }
                     else {
                         if (playerChoice === options[2]){
-                            console.log("Rock beats scissors! Computer wins a point!");
+                            console.log("You chose scissors.\nComputer chose rock.\n\nRock beats scissors! Computer wins a point!");
                             return computerPoints++;
                         }
                         else{
-                            console.log("Rock beats scissors! You win a point!");
+                            console.log("You chose rock.\nComputer chose scissors.\n\nRock beats scissors! You win a point!");
                             return playerPoints++;
                         }
                     }
                 }
-                else if(playerChoice === options[1] || computerChoice === options[1]){ //if either player of computer picks paper
+                else if(playerChoice === options[1] || computerChoice === options[1]){ //if either player or computer picks paper
                     if (playerChoice === options[1] && computerChoice === options[1]){
-                        console.log("Paper ties with paper! It's a draw!");
+                        console.log("You chose paper.\nComputer chose paper.\n\nPaper ties with paper! It's a draw!");
                         return;
                     }
                     else if (playerChoice === options[2] && computerChoice === options[1]){
-                        console.log("Scissors beats paper! You win a point!");
+                        console.log("You chose scissors.\nComputer chose paper.\n\nScissors beats paper! You win a point!");
                         return playerPoints++;
                     }
                     else{
-                        console.log("Scissors beats paper! Computer wins a point!");
+                        console.log("You chose paper.\nComputer chose scissors.\n\nScissors beats paper! Computer wins a point!");
                         return computerPoints++;
                     }
                 }
                 else{//if player and computer both pick scissors
-                    console.log("Scissors tie with scissors! It's a draw!");
+                    console.log("You chose scissors.\nComputer chose scissors.\n\nScissors tie with scissors! It's a draw!");
                     return;
                 }
             }
@@ -111,4 +109,5 @@ function playGame(){
     }
 }
 
-//initial user prompt to play and to play again
+    //initial user prompt to play and to play again
+
