@@ -114,7 +114,23 @@ function playGame(){
 console.log('%cWelcome to "Rock, Paper, Scissors"!', 'font-weight: bold; background-color: black; color: white;')
 console.log("\n\nThis is a game of chance involving two players picking one of three possible choices(Rock, Paper, Scissors) per round.\nThe victory conditions are as follows: Rock beats scissors, scissors beats paper, and paper beats rock.\n\n");
 
-    //player prompt to play
+    //user prompt to play
 
-playerChoice = prompt("Would you like to play?");
+playerChoice = prompt("Would you like to play?Y/N: ");
 
+    //formats answer
+
+playerChoice = playerChoice.toUpperCase();
+
+    //define if statement for whether to play or not
+if(playerChoice === "Y" || playerChoice === "YE" || playerChoice === "YA" || playerChoice === "YEH" || playerChoice === "YAH" || playerChoice === "YES" || playerChoice === "YEAH" || playerChoice === "SURE" || playerChoice === "OK" || playerChoice === "OKAY"){ //if user wishes to play
+    console.log("%c\nLET'S PLAY!\n\n", "font-weight: bold;");
+    while(playerChoice === "Y" || playerChoice === "YE" || playerChoice === "YA" || playerChoice === "YEH" || playerChoice === "YAH" || playerChoice === "YES" || playerChoice === "YEAH" || playerChoice === "SURE" || playerChoice === "OK" || playerChoice === "OKAY"){ //repeats game sequence so long as user wishes to play again
+        playGame();
+        playerChoice = prompt("Would you like to play again?Y/N: ");
+        playerChoice = playerChoice.toUpperCase();
+    }    
+}
+else{
+    console.log("\nOk, bye.;_;");
+}
