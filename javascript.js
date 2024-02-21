@@ -96,10 +96,19 @@ function playGame(){
     }        
 
         //Create while loop to run preset number of game rounds
+
     while(playerPoints < 3 && computerPoints < 3){
         playRound();
     }
 
+    //if statement to determine victory condition
     
-
+    if(playerPoints === 3){
+        console.log("You win!");
+    }
+    else{
+        console.log("You lose!");
+    }
 }
+
+//initial user prompt to play and to play again
